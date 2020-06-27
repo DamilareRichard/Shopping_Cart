@@ -1,0 +1,185 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	background-image: url(img2.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	font-family: sans-serif;
+}
+
+header h1{
+	font-size: 3.5rem;
+	text-transform: uppercase;
+	font-family: sans-serif;
+	color: rgb(255, 255, 255);
+	font-weight: bold;
+
+}
+
+.container{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 100%;
+	max-width: 95%;
+	margin: 1rem;
+
+}
+
+form{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 80%;
+	margin: 1rem;
+}
+
+form input,
+form button {
+	background-color: #FFF;
+	color: rgb(0, 0, 0, .6);
+	border: none;
+	font-size: 1.4rem;
+	padding: 0.7rem;
+}
+
+form input, form button:focus{
+	border-color: transparent;
+}
+
+form input{
+	width: 100%;
+}
+
+.price-tag {
+	background: rgb(35, 112, 132);
+	color: #cdcdcd;
+
+}
+
+.price {
+	background-color: grey;
+	padding: .7rem;
+	font-weight: bold;
+	border-radius: 20px;
+	opacity: 1;
+}
+
+form button {
+	background-color: yellow;
+	color: lightblue;
+	padding: .7rem;
+	transition: all .5s ease;
+	cursor: pointer;
+}
+
+form button .fa-plus{
+	font-size: 2rem;
+}
+
+.todo-cont{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 100%;
+	max-width: 100%;
+	margin: 1rem;
+
+}
+
+.todo-list {
+	max-width: 100%;
+	list-style: none;
+}
+
+.todo{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: .5rem;
+	margin: .75rem;
+	background: #FFF;
+	transition: all .5s ease-in-out;
+	font-size: 1.1rem;
+	border-radius: 15px;
+}
+
+.todo li {
+	flex: 1;
+}
+
+.todo-item{
+	color: #000;
+	padding: .5rem 1rem;
+}
+
+.trash-o-btn,
+.complete-btn,
+.edit-btn {
+
+	color: #FFF;
+	background-color: red;
+	border: transparent;
+	padding: .5rem;
+	font-size: 1rem;
+	border-radius: 40%;
+	margin-left: 10px;
+	cursor: pointer;
+}
+
+.edit-btn{
+	background: blue;
+}
+
+.complete-btn {
+	background: lightgreen;
+}
+
+.fa-trash-o,
+.fa-check,
+.fa-pencil  {
+	pointer-events: none;
+	font-size: 1rem;
+}
+
+.fall {
+	transform: translateY(5rem) rotateX(10deg);
+	opacity: 0;
+}
+
+.completed{
+	text-decoration: line-through;
+	opacity: .8;
+}
+
+
+@media screen and (max-width: 400px) {
+
+	header h1 {
+		font-size: 2.2rem;
+	}
+
+	form{
+		width: 100%;
+	}
+	input[type='text'] {
+		font-size: 16px;
+		
+	}
+
+	input[type='number'] {
+		font-size: 16px;
+		
+	}
+	form button{
+		padding: .42rem
+	}
+}
